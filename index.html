@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ModelDemo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/mainService.js"></script>
+    <script src="js/app/mainController.js"></script>
+</head>
+
+<body ng-app="ModelDemo">
+<div class="row container-full ">
+    <div class="col-12" ng-controller="mainController">
+        <h1>{{messages}}</h1>
+    </div>
+</div>
+</body>
+</html>

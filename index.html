@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -19,8 +20,31 @@
 <body ng-app="ModelDemo">
 <div class="row container-full ">
     <div class="col-12" ng-controller="mainController">
-        <h1>Hello {{userName}}</h1>
-        <input type="text" ng-model="userName"/>
+
+        <!-- Form Elements -->
+        <form action="" method="get">
+            <fieldset>
+                <legend>Example form</legend>
+                <!-- Input[type=text] -->
+                <div class="col-4 text-right">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" cols="60" placeholder="Your full name..."
+                           ng-model="user.name">
+                </div>
+
+                <div class="col-4 text-right">
+                    <label for="login">Login</label>
+                    <input type="text" id="login" cols="60" placeholder="Your login here..."
+                           ng-model="user.login">
+                </div>
+
+                <div class="col-4 text-right">
+                    <label for="job">Job</label>
+                    <input type="text" id="job" cols="60" placeholder="Your job here..."
+                           ng-model="user.job">
+                </div>
+            </fieldset>
+        </form>
     </div>
 </div>
 </body>

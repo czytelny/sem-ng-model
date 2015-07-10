@@ -18,8 +18,9 @@ angular.module("ModelDemo").controller("mainController",
         };
 
         $scope.areTheyEqual = function() {
-            if ($scope.user == $scope.user2) {
+            if ($scope.user === $scope.user2) {
                 console.log("yup");
+                return;
             }
             console.log("nope");
         }

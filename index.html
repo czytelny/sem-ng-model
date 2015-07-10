@@ -20,12 +20,8 @@
 <body ng-app="ModelDemo">
 <div class="row container-full ">
     <div class="col-12" ng-controller="mainController">
-        Username is: {{user.name}}
-
-        <div class="col-12" ng-controller="secondController">
-            userName in child scope is: {{user.name}}
-            <input type="text" id="name" placeholder="Your full name..."
-                   ng-model="user.name">
+        <div ng-repeat="u in users.usersLists">
+            <strong>name</strong>: {{u.name}} <strong>age</strong>: {{u.age}} <strong>job</strong>: {{u.job}}
         </div>
     </div>
 </div>

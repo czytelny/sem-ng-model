@@ -20,12 +20,12 @@
 <body ng-app="ModelDemo">
 <div class="row container-full ">
     <div class="col-12" ng-controller="mainController">
-        Username is: {{userName}}
+        Username is: {{user.name}}
 
         <div class="col-12" ng-controller="secondController">
-            userName in child scope is: {{userName}}
-            <input type="text" id="name" cols="60" placeholder="Your full name..."
-                   ng-model="userName">
+            userName in child scope is: {{user.name}}
+            <input type="text" id="name" placeholder="Your full name..."
+                   ng-model="user.name">
         </div>
     </div>
 </div>

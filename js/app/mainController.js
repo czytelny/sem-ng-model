@@ -4,9 +4,9 @@ var scope;
 angular.module("ModelDemo").controller("mainController",
     ['$scope', 'MainService', function($scope, MainService) {
         scope = $scope;
-
-        $scope.userName = "michal";
-
+        $scope.user = {
+            name: "michal"
+        };
     }]);
 
 var scope2;

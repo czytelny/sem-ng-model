@@ -13,7 +13,8 @@ angular.module("ModelDemo").controller("mainController",
     }]);
 
 var scope2;
-angular.module("ModelDemo").controller("secondController", function($scope) {
+angular.module("ModelDemo").controller("secondController", function($scope, MainService) {
     scope2 = $scope;
+    $scope.usersInSecond = MainService.getUser();
 
 });

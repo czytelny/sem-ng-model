@@ -10,6 +10,12 @@ angular.module("ModelDemo").factory("MainService", function ($http) {
         usersLists: []
     };
 
+    var userModel = {
+        name: "",
+        age: "",
+        job: ""
+    };
+
     //some dictionary data on init
     $http.get("data/jobs.json").then(function(response) {
         dictionaries.jobsList = response.data.jobs;
@@ -26,14 +32,19 @@ angular.module("ModelDemo").factory("MainService", function ($http) {
         return dictionaries.jobsList;
     };
 
-    var saveUser = function(newUser) {
-        console.log("i'm saving " + newUser.name);
+    var saveUser = function() {
+        console.log("i'm saving " + userModel.name);
+    };
+
+    var getUser = function() {
+        return userModel;
     };
 
 
     return {
         getUsers: getUsers,
         getJobs: getJobs,
-        saveUser: saveUser
+        saveUser: saveUser,
+        getUser: getUser
     }
 });

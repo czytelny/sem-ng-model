@@ -23,6 +23,16 @@
         <div ng-repeat="u in users.usersLists">
             <strong>name</strong>: {{u.name}} <strong>age</strong>: {{u.age}} <strong>job</strong>: {{u.job}}
         </div>
+
+        <div class="col-12">
+            <h1>Creating new user</h1>
+            Name:<input type="text" ng-model="userEntity.name">
+            Age:<input type="text" ng-model="userEntity.age">
+            Job:<input type="text" ng-model="userEntity.job">
+            <button ng-click="saveUser()">saveUser</button>
+
+        </div>
+
     </div>
 </div>
 </body>

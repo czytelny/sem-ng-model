@@ -26,9 +26,14 @@ angular.module("ModelDemo").factory("MainService", function ($http) {
         return dictionaries.jobsList;
     };
 
+    var saveUser = function(newUser) {
+        console.log("i'm saving " + newUser.name);
+    };
+
 
     return {
         getUsers: getUsers,
-        getJobs: getJobs
+        getJobs: getJobs,
+        saveUser: saveUser
     }
 });
